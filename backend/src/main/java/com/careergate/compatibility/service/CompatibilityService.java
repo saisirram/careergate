@@ -63,13 +63,15 @@ public class CompatibilityService {
                 .collect(Collectors.joining(", "));
 
         List<JobRequiredSkill> jobRequiredSkills = jobRequiredSkillRepository.findByJobId(jobId);
-        List<String> requiredSkillNames = jobRequiredSkills.stream()
-                .map(rs -> rs.getSkill().getName())
-                .collect(Collectors.toList());
+
+        // Format: "SkillName:MinRating, SkillName2:MinRating2"
+        String jobRequiredSkillsAndRatingContext = jobRequiredSkills.stream()
+                .map(rs -> rs.getSkill().getName() + ":" + rs.getMinRating())
+                .collect(Collectors.joining(", "));
 
         // 1. Call AI for analysis
         String aiResponseJson = aiService.analyzeResume(profile.getResumeText(), job.getDescription(),
-                requiredSkillNames, userSkillsContext);
+                jobRequiredSkillsAndRatingContext, userSkillsContext);
 
         try {
             com.careergate.compatibility.dto.AiAnalysisResponse aiData = objectMapper.readValue(aiResponseJson,
