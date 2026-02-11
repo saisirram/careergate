@@ -1,86 +1,55 @@
-# CareerGate - Job Compatibility & Skill Gap Analysis Platform
+# 🚀 CareerGate - Job Compatibility & Skill Gap Analysis Platform
 
-**Your gateway to the right job.**
+**Bridging the distance between ambition and achievement with AI-driven insights.**
 
-CareerGate helps candidates evaluate their readiness for job roles, identify skill gaps, and follow a personalized roadmap to confidently apply for jobs.
+CareerGate is a next-generation Career Intelligence platform designed to solve the "Black Hole" effect in job applications. By leveraging Large Language Models (LLMs) and Vector-based skill mapping, CareerGate provides candidates with instant, actionable feedback on their job compatibility and a personalized roadmap to success.
 
-## 🚀 Features
+---
 
-- **Compatibility Score**: Get a 0-100 score based on skill match, resume keywords, and experience.
-- **Skill Gap Analysis**: Detailed breakdown of required vs. actual ratings for each skill.
-- **Learning Roadmap**: Personalized week-by-week learning plan generated for identified gaps.
-- **Job Posting**: Recruiters can post detailed job descriptions with skill requirements.
-- **Role-Based Access**: Separate flows for Candidates and Recruiters.
+## � Key Features
 
-## 🛠 Tech Stack
+### 🎯 For Candidates
+*   **Precision Resume Analysis**: AI-powered parsing that understands semantic context, not just keywords.
+*   **Weighted Compatibility Scoring**: A 0-100 score based on skill match, experience depth, and resume quality.
+*   **Interactive Skill Gap Analysis**: Visual breakdown of your "Actual" vs. "Required" skills with suggestions for improvement.
+*   **AI-Generated Learning Roadmaps**: Personalized, time-bound study plans featuring verified YouTube tutorials and technical documentation.
+*   **One-Click Applications**: Seamlessly apply for jobs with automatic background compatibility checks.
+
+### 💼 For Recruiters
+*   **Intelligent Screening**: Instantly filter hundreds of resumes using AI-generated compatibility scores.
+*   **Granular Job Settings**: Define minimum rating requirements for specific skills.
+*   **Applicant Dashboard**: Track all applicants with rich insights into their strengths and areas for growth.
+
+---
+
+## 🛠️ Tech Stack
 
 ### Backend
-- **Framework**: Spring Boot 3.2 (Java 21)
-- **Database**: PostgreSQL with Flyway Migration
-- **Security**: Spring Security + JWT
-- **Resume Parsing**: Apache Tika
-- **Documentation**: SpringDoc OpenAPI (Swagger)
+*   **Java 21 & Spring Boot 3.2.2**: Enterprise-grade performance and scalability.
+*   **Spring AI**: Seamless integration with LLMs (OpenAI/OpenRouter).
+*   **Spring Security & JWT**: Secure, stateless authentication with Role-Based Access Control (RBAC).
+*   **PostgreSQL**: Reliable relational data storage.
+*   **MinIO**: S3-compatible object storage for secure resume management.
+*   **Apache Tika**: Robust text extraction from PDF and DOCX formats.
 
 ### Frontend
-- **Framework**: React 18 + TypeScript + Vite
-- **Styling**: Tailwind CSS + ShadCN UI
-- **State Management**: React Query + Context/Redux
-- **HTTP Client**: Axios
+*   **React 18 & TypeScript**: Modern, type-safe UI components.
+*   **Tailwind CSS**: Utility-first styling for a clean, futuristic interface.
+*   **Framer Motion**: Premium micro-animations and smooth transitions.
+*   **Lucide React**: Beautiful, consistent iconography.
+*   **React Query**: Efficient server-state management.
 
-## 📂 Project Structure
+---
 
-```
-├── backend/            # Spring Boot Application
-│   ├── src/main/java/com/careergate
-│   ├── src/main/resources
-│   └── pom.xml
-│
-├── frontend/           # React Application
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   ├── vite.config.ts
-│   └── tailwind.config.js
-```
+## 📚 Documentation & Guides
 
-## 🏃‍♂️ Getting Started
+To dive deeper into the project, please refer to the following documents:
 
-### Prerequisites
-- Java 21+ and Maven
-- Node.js 18+ and npm
-- PostgreSQL running locally
+| Document | Description |
+| :--- | :--- |
+| 📘 **[Design Document (V1.0)](./CareerGate%20Design%20Document%20V1.md)** | Detailed architecture, feature specifications, and system design. |
+| 🛠️ **[Local Setup Guide](./LOCAL_SETUP_GUIDE.md)** | Step-by-step instructions to run CareerGate on your local machine. |
 
-### Backend Setup
+---
 
-1. Navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
-2. Configure database in `src/main/resources/application.properties`:
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/careergate
-   spring.datasource.username=postgres
-   spring.datasource.password=your_password
-   ```
-3. Run the application:
-   ```bash
-   mvn spring-boot:run
-   ```
-
-### Frontend Setup
-
-1. Navigate to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## 📜 License
-MIT
+**Built with ❤️ for the future of hiring.**
