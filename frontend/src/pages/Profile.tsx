@@ -94,8 +94,11 @@ const Profile = () => {
         }
     };
 
+    const [isUploading, setIsUploading] = useState(false);
+
     const handleUploadResume = async () => {
-        if (!file) return;
+        if (!file || isUploading) return;
+        setIsUploading(true);
         const formData = new FormData();
         formData.append('file', file);
         try {
@@ -107,6 +110,8 @@ const Profile = () => {
             setFile(null);
         } catch (err) {
             toast.error('Upload failed');
+        } finally {
+            setIsUploading(false);
         }
     };
 
@@ -263,11 +268,17 @@ const Profile = () => {
                         </div>
 
                         <button
-                            disabled={!file}
+                            disabled={!file || isUploading}
                             onClick={handleUploadResume}
                             className="btn-primary w-full mt-6 flex items-center justify-center gap-2 disabled:opacity-50 disabled:grayscale"
                         >
-                            <Upload className="w-4 h-4" /> Upload & Analyze Resume
+                            {isUploading ? (
+                                <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                            ) : (
+                                <>
+                                    <Upload className="w-4 h-4" /> Upload & Analyze Resume
+                                </>
+                            )}
                         </button>
                     </motion.div>
 
