@@ -5,13 +5,13 @@
 |**Release Date:**|10 Feb 2026|
 |**Author:**|Sai Sriram Vundavalli|
 
-1. **Project Overview:**
+# 1. **Project Overview:**
 
 CareerGate is a next-generation Career Intelligence platform designed to bridge the widening gap between industry requirements and candidate skills. By leveraging Large Language Models (LLMs) and Vector-based skill mapping, CareerGate automates the process of compatibility analysis, resume parsing, and personalized learning path generation.
 
-1. **Problem Statement & Pain Points:**
+# 2. **Problem Statement & Pain Points:**
 
-**2.1. The Candidate’s Challenge:**
+## **2.1. The Candidate’s Challenge:**
 
 - **The "Black Hole" Effect:** Candidates apply for jobs and never receive feedback on why they were rejected.
 - **Skill Ambiguity:** Candidates often don't know exactly which skill they are missing for a specific role.
@@ -23,7 +23,7 @@ CareerGate is a next-generation Career Intelligence platform designed to bridge 
 - **Surface-Level Keyword Matching:** Traditional ATS (Applicant Tracking Systems) rely on simple keyword matching, missing candidates with equivalent alternative skills.
 - **Subjectivity:** Manual screening is prone to bias and inconsistent evaluation of skill proficiency.
 
-1. **The CareerGate Solution:**
+# 3. **The CareerGate Solution:**
 
    CareerGate solves these problems by providing an AI-Driven Feedback Loop:
 
@@ -38,57 +38,36 @@ CareerGate is a next-generation Career Intelligence platform designed to bridge 
 **3. Automated Upskilling:** Automatically generates a time-bound learning roadmap with verified resources for every identified gap.
 
 
-1. **Feature Specification:**
+# 4. **Feature Specification:**
 
-   **4.1 Precision Resume Analysis:**
+   ## **4.1 Precision Resume Analysis:**
 
-   ` `**Description:** Extracts entities (Skills, Experience, Education) and maps them to a normalized taxonomy.
+   **Description:** Extracts entities (Skills, Experience, Education) and maps them to a normalized taxonomy.
 
    **Example:** If a job asks for "Cloud Infrastructure" and a resume lists "AWS EC2/S3" and "Terraform", the AI identifies a 95% match despite the different terminology.
 
-   `  `**4.2 Interactive Skill Gap Analysis:**
+   ## **4.2 Interactive Skill Gap Analysis:**
 
-   `  `**Description:** A visual dashboard showing the "Required" vs "Actual" rating for each skill.
+   **Description:** A visual dashboard showing the "Required" vs "Actual" rating for each skill.
 
-   `  `**Example:** A job requires Java (Rating 4). A candidate has Java (Rating 2). The system identifies a "Gap of 2" and tags it as "Critical".
+   **Example:** A job requires Java (Rating 4). A candidate has Java (Rating 2). The system identifies a "Gap of 2" and tags it as "Critical".
 
-   `  `**4.3 AI-Generated Learning Roadmaps:**
+   ## **4.3 AI-Generated Learning Roadmaps:**
 
-   `  `**Description:** A curated 1-4 week plan.
+   **Description:** A curated 1-4 week plan.
 
-   `  `**Example:** For a "Docker" gap, Day 1 includes a "Docker Architecture" video from Programming with Mosh and a link to the official Docker documentation.
-
-
+   **Example:** For a "Docker" gap, Day 1 includes a "Docker Architecture" video from Programming with Mosh and a link to the official Docker documentation.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. **System Architecture:**
+# 5. **System Architecture:**
 
    The application follows a modern decoupled architecture with a React-based frontend and a Java Spring Boot backend, integrated with OpenAI via Spring AI.
 
 ![A screen shot of a computer&#x0A;&#x0A;Description automatically generated](system_architecture.png)
 
-1. **Component-Wise Design:**
+## **5.1. Component-Wise Design:**
 
-   1. **Frontend (React)**
+   ### **5.1.1. Frontend (React)**
 
 **Responsibilities**
 
@@ -105,19 +84,19 @@ CareerGate is a next-generation Career Intelligence platform designed to bridge 
 - Learning Roadmap Timeline\
   Recruiter Dashboard
 
-1. **Backend Services**
+### **5.1.2. Backend Services**
    1. **User & Profile Service**
    - Manages users, roles, and candidate profiles
    - Stores parsed resume text
    - Maintains experience, CTC, notice period
 
-**5.1.2.2 Job Management Service**
+### **5.1.2.2 Job Management Service**
 
 - Recruiters create & manage jobs
 - Define required skills with minimum ratings
 - Maintains job metadata
 
-**5.1.2.3 Application Service**
+### **5.1.2.3 Application Service**
 
 - Handles job applications
 - Links candidate ↔ job
@@ -139,14 +118,14 @@ CareerGate is a next-generation Career Intelligence platform designed to bridge 
 - Experience match score
 - AI-generated explanation
 
-**5.1.2.5 Learning Roadmap Service**
+### **5.1.2.5 Learning Roadmap Service**
 
 - Converts **skill gaps → structured learning plan**
 - Generates week/day-wise roadmap
 - Uses verified learning resources
 
 
-1. **Tech Stack Details:**
+# 6. **Tech Stack Details:**
 
    **Frontend:** React 18, TypeScript, Tailwind CSS, Framer Motion (Animations), Lucide React (Icons).
 
@@ -159,22 +138,22 @@ CareerGate is a next-generation Career Intelligence platform designed to bridge 
 **External Storage:** Minio (Minio S3)
 
 
-1. **Entity Relationship (ER) Diagram:**
+# 7. **Entity Relationship (ER) Diagram:**
 
    The database schema is designed to handle users, their modular skills, job requirements, and the complex results of AI analysis.
 
 ![A screenshot of a computer&#x0A;&#x0A;Description automatically generated](ER_Diagram.png)
 
 
-1. **User Flow:**
+# 8. **User Flow:**
 
-`      `**8.1. Candidate User Flow**
+## **8.1. Candidate User Flow**
 
 ![A screenshot of a computer&#x0A;&#x0A;Description automatically generated](User_flow.png)
 
 
 
-**8.2. Recruiter Flow**
+## **8.2. Recruiter Flow**
 
 ![A screenshot of a computer&#x0A;&#x0A;Description automatically generated](recruiter_flow.png)
 
