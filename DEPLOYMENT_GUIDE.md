@@ -77,7 +77,7 @@ JWT_SECRET=your-256-bit-secret-key
    - Region: Choose closest to your users
 3. **Get Connection String**: Copy the connection string (looks like):
    ```
-   postgresql://username:password@ep-cool-name-123456.us-east-2.aws.neon.tech/neondb
+   psql 'postgresql://neondb_owner:npg_bvoRp5hlX2xZ@ep-empty-rice-aemdefi0-pooler.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
    ```
 4. **Enable pgvector** (for future RAG features):
    - Go to SQL Editor
@@ -195,9 +195,9 @@ VITE_API_URL=https://careergate-api.onrender.com/api/v1
 
 Add to Render environment variables:
 ```
-MINIO_ENDPOINT=https://<account-id>.r2.cloudflarestorage.com
-MINIO_ACCESS_KEY=<your-access-key>
-MINIO_SECRET_KEY=<your-secret-key>
+MINIO_ENDPOINT=https://0e35e47b45ca5b5230f3a442fba516ce.r2.cloudflarestorage.com
+MINIO_ACCESS_KEY=7de43af957d4ec41a110ee278ab5d577
+MINIO_SECRET_KEY=0826746ba9d885e6fe2deb7e2d67ee9b69202802a02c63736f288e60c3a41240
 MINIO_BUCKET_NAME=careergate-resumes
 ```
 
