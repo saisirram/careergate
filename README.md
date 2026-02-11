@@ -6,6 +6,16 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 
 ---
 
+## 🌍 Live Demo
+**Application URL:** [https://careergate.vercel.app/](https://careergate.vercel.app/)
+
+> ### **⚠️⚠️⚠️ Important Notes**
+> *   **Cold Start (Render Free Tier)**: The backend is hosted on Render's free instances, which sleep after inactivity. **The first request (e.g., login or profile loading) may take 60-90 seconds to wake up the server.** Please be patient during the initial load.
+> *   **Database Wake-up**: The PostgreSQL database (Neon) also enters standby mode. If data doesn't appear immediately, wait a few seconds and refresh.
+> *   **AI Processing**: Resume analysis and roadmap generation involve complex LLM orchestration — these might take a few moments to generate high-quality results.
+
+---
+
 ## 🚀 Key Features
 
 ### 🎯 For Candidates
