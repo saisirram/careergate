@@ -6,7 +6,7 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 
 ---
 
-## � Key Features
+## 🚀 Key Features
 
 ### 🎯 For Candidates
 *   **Precision Resume Analysis**: AI-powered parsing that understands semantic context, not just keywords.
@@ -19,6 +19,17 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 *   **Intelligent Screening**: Instantly filter hundreds of resumes using AI-generated compatibility scores.
 *   **Granular Job Settings**: Define minimum rating requirements for specific skills.
 *   **Applicant Dashboard**: Track all applicants with rich insights into their strengths and areas for growth.
+
+---
+
+## 📚 Documentation & Guides
+
+To dive deeper into the project, please refer to the following documents:
+
+| Document | Description |
+| :--- | :--- |
+| 📘 **[Design Document (V1.0)](./CareerGate%20Design%20Document%20V1.md)** | Detailed architecture, feature specifications, and system design. |
+| 🛠️ **[Local Setup Guide](./LOCAL_SETUP_GUIDE.md)** | Step-by-step instructions to run CareerGate on your local machine. |
 
 ---
 
@@ -38,17 +49,6 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 *   **Framer Motion**: Premium micro-animations and smooth transitions.
 *   **Lucide React**: Beautiful, consistent iconography.
 *   **React Query**: Efficient server-state management.
-
----
-
-## 📚 Documentation & Guides
-
-To dive deeper into the project, please refer to the following documents:
-
-| Document | Description |
-| :--- | :--- |
-| 📘 **[Design Document (V1.0)](./CareerGate%20Design%20Document%20V1.md)** | Detailed architecture, feature specifications, and system design. |
-| 🛠️ **[Local Setup Guide](./LOCAL_SETUP_GUIDE.md)** | Step-by-step instructions to run CareerGate on your local machine. |
 
 ---
 
