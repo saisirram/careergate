@@ -16,6 +16,31 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 
 ---
 
+## 🌐 Infrastructure & Deployment
+
+The application is distributed across the following cloud platforms:
+
+| Component | Platform | Description |
+| :--- | :--- | :--- |
+| **Frontend (UI)** | [Vercel](https://vercel.com/) | High-performance edge hosting for the React application. |
+| **Backend (API)** | [Render](https://render.com/) | Dockerized Spring Boot service with automated CI/CD. |
+| **Database** | [Neon](https://neon.tech/) | Serverless PostgreSQL for reliable data persistence. |
+| **Object Storage** | [Cloudflare R2](https://www.cloudflare.com/developer-platform/r2/) | S3-compatible storage for secure resume management. |
+| **AI Orchestration** | [OpenRouter](https://openrouter.ai/) | Unified API for access to various LLMs (Nemotron/GPT). |
+
+---
+
+## 📚 Documentation & Guides
+
+To dive deeper into the project, please refer to the following documents:
+
+| Document | Description |
+| :--- | :--- |
+| 📘 **[Design Document (V1.0)](./CareerGate%20Design%20Document%20V1.md)** | Detailed architecture, feature specifications, and system design. |
+| 🛠️ **[Local Setup Guide](./LOCAL_SETUP_GUIDE.md)** | Step-by-step instructions to run CareerGate on your local machine. |
+
+---
+
 ## 🚀 Key Features
 
 ### 🎯 For Candidates
@@ -32,16 +57,7 @@ CareerGate is a next-generation Career Intelligence platform designed to solve t
 
 ---
 
-## 📚 Documentation & Guides
 
-To dive deeper into the project, please refer to the following documents:
-
-| Document | Description |
-| :--- | :--- |
-| 📘 **[Design Document (V1.0)](./CareerGate%20Design%20Document%20V1.md)** | Detailed architecture, feature specifications, and system design. |
-| 🛠️ **[Local Setup Guide](./LOCAL_SETUP_GUIDE.md)** | Step-by-step instructions to run CareerGate on your local machine. |
-
----
 
 ## 🛠️ Tech Stack
 
@@ -49,8 +65,8 @@ To dive deeper into the project, please refer to the following documents:
 *   **Java 21 & Spring Boot 3.2.2**: Enterprise-grade performance and scalability.
 *   **Spring AI**: Seamless integration with LLMs (OpenAI/OpenRouter).
 *   **Spring Security & JWT**: Secure, stateless authentication with Role-Based Access Control (RBAC).
-*   **PostgreSQL**: Reliable relational data storage.
-*   **MinIO**: S3-compatible object storage for secure resume management.
+*   **PostgreSQL**: Reliable relational data storage (hosted on Neon).
+*   **Cloudflare R2 / MinIO**: S3-compatible object storage for secure resume management.
 *   **Apache Tika**: Robust text extraction from PDF and DOCX formats.
 
 ### Frontend
