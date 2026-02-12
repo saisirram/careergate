@@ -15,6 +15,7 @@ import PostJob from './pages/PostJob';
 import MyJobs from './pages/MyJobs';
 import JobDetails from './pages/JobDetails';
 import NotFound from './pages/NotFound';
+import DeploymentNotice from './components/DeploymentNotice';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
     const token = localStorage.getItem('token');
@@ -38,6 +39,7 @@ function App() {
                     }}
                 />
                 <Navbar />
+                <DeploymentNotice />
                 <Routes>
                     <Route path="/" element={<Landing />} />
                     <Route path="/login" element={<Login />} />
